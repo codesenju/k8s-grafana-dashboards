@@ -52,7 +52,7 @@
       }
     ]
   },
-  "description": "The dashboards shows statuses of Pods and PVC's within the cluster, created by codesenju. https://github.com/codesenju/k8s-grafana-dashboards",
+  "description": "A dashboard showing statuses of Pods and PVC's within the cluster, created by codesenju. https://github.com/codesenju/k8s-grafana-dashboards",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
