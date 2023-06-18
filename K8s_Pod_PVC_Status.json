@@ -272,6 +272,7 @@
         "x": 0,
         "y": 10
       },
+      "hideTimeOverride": true,
       "id": 7,
       "options": {
         "autoSizeColumns": true,
@@ -386,6 +387,7 @@
           "refId": "A"
         }
       ],
+      "timeFrom": "5s",
       "title": "Namespace with pod in non-running status",
       "type": "grafana-polystat-panel"
     },
@@ -428,6 +430,7 @@
         "x": 12,
         "y": 10
       },
+      "hideTimeOverride": true,
       "id": 10,
       "options": {
         "autoSizeColumns": true,
@@ -542,6 +545,7 @@
           "refId": "A"
         }
       ],
+      "timeFrom": "5s",
       "title": "Namespace with pvc in non-bound status",
       "type": "grafana-polystat-panel"
     },
@@ -596,6 +600,7 @@
         "x": 0,
         "y": 18
       },
+      "hideTimeOverride": true,
       "id": 4,
       "options": {
         "autoSizeColumns": true,
@@ -710,6 +715,7 @@
           "refId": "A"
         }
       ],
+      "timeFrom": "5s",
       "title": "Pods",
       "type": "grafana-polystat-panel"
     },
@@ -751,6 +757,7 @@
         "x": 12,
         "y": 18
       },
+      "hideTimeOverride": true,
       "id": 8,
       "options": {
         "autoSizeColumns": true,
@@ -865,6 +872,7 @@
           "refId": "A"
         }
       ],
+      "timeFrom": "5s",
       "title": "PVC's",
       "type": "grafana-polystat-panel"
     }
@@ -882,7 +890,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "Prometheus",
           "value": "Prometheus"
         },
@@ -903,8 +911,8 @@
       {
         "current": {
           "selected": true,
-          "text": "test-efs",
-          "value": "test-efs"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": {
           "type": "prometheus",
@@ -930,13 +938,13 @@
     ]
   },
   "time": {
-    "from": "now-1m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "K8s Pod/PVC Status",
   "uid": "f3b74c5e-52fe-47e2-8b3b-50cd1f59ed8c",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
