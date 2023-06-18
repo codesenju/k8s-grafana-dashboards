@@ -137,7 +137,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -219,7 +219,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -236,7 +236,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -375,7 +375,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -392,7 +392,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "description": "",
       "fieldConfig": {
@@ -531,7 +531,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -561,7 +561,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -699,7 +699,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -716,7 +716,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -854,7 +854,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -902,9 +902,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "kube-system",
-          "value": "kube-system"
+          "selected": true,
+          "text": "test-efs",
+          "value": "test-efs"
         },
         "datasource": {
           "type": "prometheus",
@@ -937,6 +937,6 @@
   "timezone": "",
   "title": "K8s Pod/PVC Status",
   "uid": "f3b74c5e-52fe-47e2-8b3b-50cd1f59ed8c",
-  "version": 27,
+  "version": 1,
   "weekStart": ""
 }
