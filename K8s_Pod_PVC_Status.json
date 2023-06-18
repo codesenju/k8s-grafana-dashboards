@@ -872,7 +872,12 @@
   "refresh": "5s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "prometheus",
+    "kubernetes",
+    "pvc",
+    "pod"
+  ],
   "templating": {
     "list": [
       {
@@ -932,6 +937,6 @@
   "timezone": "",
   "title": "K8s Pod/PVC Status",
   "uid": "f3b74c5e-52fe-47e2-8b3b-50cd1f59ed8c",
-  "version": 26,
+  "version": 27,
   "weekStart": ""
 }
