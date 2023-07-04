@@ -1409,7 +1409,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "Prometheus",
           "value": "Prometheus"
         },
@@ -1429,7 +1429,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "kube-system",
           "value": "kube-system"
         },
@@ -1464,6 +1464,6 @@
   "timezone": "",
   "title": "K8s Pod/PVC Status v3",
   "uid": "f3b74c5e-52fe-47e2-8b3b-50cd1f59ed8c2",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
