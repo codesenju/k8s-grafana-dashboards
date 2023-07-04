@@ -414,7 +414,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum(kube_pod_container_resource_limits{namespace=\"prod\", pod=~\"^prod-skillsets-api.*\", unit=\"byte\"}) by (container) ",
+          "expr": "sum(kube_pod_container_resource_limits{namespace=\"$namespace\", pod=~\"^$deployment.*\", unit=\"byte\"}) by (container) ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -428,7 +428,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"prod\", pod=~\"^prod-skillsets-api.*\", image!=\"\", container!=\"\"}[5m])) by (container)",
+          "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"$namespace\", pod=~\"^$deployment.*\", image!=\"\", container!=\"\"}[5m])) by (container)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -443,7 +443,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum(container_memory_working_set_bytes{namespace=\"prod\", pod=~\"^prod-skillsets-api.*\", image!=\"\", container!=\"\"}) by (container)",
+          "expr": "sum(container_memory_working_set_bytes{namespace=\"$namespace\", pod=~\"^$deployment.*\", image!=\"\", container!=\"\"}) by (container)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -965,7 +965,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "uat",
           "value": "uat"
         },
@@ -993,7 +993,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "uat-skillsets-api",
           "value": "uat-skillsets-api"
         },
@@ -1021,13 +1021,13 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments",
   "uid": "e3dd351b-0f8a-4fe2-854e-e82244fab2be",
-  "version": 3,
+  "version": 4,
   "weekStart": ""
 }
