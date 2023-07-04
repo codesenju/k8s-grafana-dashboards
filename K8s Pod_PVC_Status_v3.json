@@ -1430,8 +1430,8 @@
       {
         "current": {
           "selected": false,
-          "text": "prod",
-          "value": "prod"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": {
           "type": "prometheus",
