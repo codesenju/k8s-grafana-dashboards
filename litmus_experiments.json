@@ -224,7 +224,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -305,7 +305,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "bb1767ab-d57c-45bc-9994-51479e49315f"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(container_memory_working_set_bytes{namespace=~\"$namespace\", image!=\"\",pod=~\"^$deployment.*\"}) by (pod)",
@@ -316,7 +316,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "bb1767ab-d57c-45bc-9994-51479e49315f"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "sum(container_m_working_set_bytes{namespace=~\"$namespace\", image!=\"\",pod=~\"^$deployment.*\"}) by (pod)",
@@ -460,7 +460,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+        "uid": "cd8aca09-423b-45b5-b83d-d35a98469cf2"
       },
       "fieldConfig": {
         "defaults": {
@@ -868,7 +868,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1045,7 +1045,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1122,7 +1122,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "bb1767ab-d57c-45bc-9994-51479e49315f"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "expr": "kube_deployment_spec_replicas{deployment=\"$deployment\",namespace=\"$namespace\"}",
@@ -1192,7 +1192,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "coredns",
           "value": "coredns"
         },
@@ -1227,6 +1227,6 @@
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments",
   "uid": "e3dd351b-0f8a-4fe2-854e-e82244fab2be",
-  "version": 5,
+  "version": 1,
   "weekStart": ""
 }
