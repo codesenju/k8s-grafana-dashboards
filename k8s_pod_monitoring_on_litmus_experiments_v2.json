@@ -776,8 +776,9 @@
               "container": 0
             },
             "renameByName": {
-              "Value #A": "CPU Requests",
-              "Value #B": "CPU Limits",
+              "Time 1": "",
+              "Value #A": "Memory Requests",
+              "Value #B": "Memory Limits",
               "Value #C": "Memory Requests",
               "Value #D": "Memory Limits",
               "Value #E": "CPU Used",
@@ -1688,6 +1689,6 @@
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments v2",
   "uid": "e3dd351b-0f8a-4fe2-854e-e82244fab2be2",
-  "version": 5,
+  "version": 7,
   "weekStart": ""
 }
