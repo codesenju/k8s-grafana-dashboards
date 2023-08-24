@@ -11,6 +11,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -19,7 +25,8 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "gnetId": 14981,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
+  "id": 4,
   "links": [
     {
       "$$hashKey": "object:94",
@@ -208,7 +215,7 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -280,7 +287,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -348,7 +355,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -416,7 +423,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -484,7 +491,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -557,7 +564,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -622,7 +629,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -789,7 +796,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -873,7 +880,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -1399,7 +1406,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1458,7 +1465,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -1477,7 +1484,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
+        "uid": "${datasource}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1561,7 +1568,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -1576,7 +1583,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -1592,7 +1599,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "uid": "${datasource}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -1611,10 +1618,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "caf45f2a-0377-403a-b23e-be4b360e9d97"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1795,7 +1799,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -2388,7 +2392,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 38,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [
     "dns",
@@ -2473,6 +2477,6 @@
   "timezone": "",
   "title": "CoreDNS",
   "uid": "wY4blRMGz",
-  "version": 1,
+  "version": 5,
   "weekStart": ""
 }
