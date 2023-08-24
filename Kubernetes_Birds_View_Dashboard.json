@@ -59,7 +59,7 @@
     ]
   },
   "description": "A dashboard showing statuses of Pods and PVC's within the cluster and additional resource information, created by codesenju. https://github.com/codesenju/k8s-grafana-dashboards",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
   "id": null,
@@ -2151,7 +2151,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "Kubernetes Bird's View Dashboard",
-  "uid": "f3b74c5e-52fe-47e2-8b3b-50cd1f59ed8c2",
+  "uid": "",
   "version": 2,
   "weekStart": ""
 }

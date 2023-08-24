@@ -77,7 +77,7 @@
     ]
   },
   "description": "USE (Utilization Saturation Errors) metrics dashboards for troubleshooting pod IP management in EKS",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "gnetId": 16032,
   "graphTooltip": 0,

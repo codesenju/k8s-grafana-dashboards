@@ -16,7 +16,7 @@
     ]
   },
   "description": "Litmus chaos on skillsets-api",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "links": [],
@@ -1534,7 +1534,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments",
-  "uid": "e3dd351b-0f8a-4fe2-854e-e82244fab2be",
+  "uid": "",
   "version": 2,
   "weekStart": ""
 }

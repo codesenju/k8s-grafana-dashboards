@@ -16,7 +16,7 @@
     ]
   },
   "description": "Container/Pod Log Dashboard(Loki as DataSource)",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
