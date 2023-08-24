@@ -11,6 +11,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -20,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
-  "id": 14,
+  "id": 7,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -104,7 +110,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -182,7 +188,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -281,6 +287,9 @@
           "expression": " fields @timestamp, @message\n | filter @logStream like 'var.log.containers.${fargate_logging_search}'\n | sort @timestamp desc\n | limit 20",
           "id": "",
           "label": "",
+          "logGroupNames": [
+            "/aws/eks/uat/fargate-logging/"
+          ],
           "logGroups": [
             {
               "accountId": "587878432697",
@@ -307,7 +316,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 38,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -333,8 +342,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CloudWatch",
-          "value": "CloudWatch"
+          "text": "Cloudwatch",
+          "value": "Cloudwatch"
         },
         "hide": 0,
         "includeAll": false,
@@ -351,8 +360,8 @@
       {
         "current": {
           "selected": false,
-          "text": "monitoring",
-          "value": "monitoring"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": {
           "type": "loki",
@@ -490,8 +499,8 @@
     ]
   },
   "timezone": "",
-  "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch) Final",
+  "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
   "uid": "",
-  "version": 6,
+  "version": 4,
   "weekStart": ""
 }
