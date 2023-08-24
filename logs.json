@@ -494,7 +494,7 @@
     ]
   },
   "timezone": "",
-  "title": "Container Log Dashboard",
+  "title": "K8s Centralized Logging (Loki, fluentbit, Clodwatch)",
   "uid": "fRIvzUZMz",
   "version": 9,
   "weekStart": ""
