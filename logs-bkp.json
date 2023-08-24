@@ -162,9 +162,8 @@
             "type": "loki",
             "uid": "${DS_LOKI}"
           },
-          "editorMode": "code",
           "expr": "sum(count_over_time(({namespace=\"$namespace\", stream=~\"$stream\", pod=~\"$pod\"})[$__interval]))",
-          "queryType": "range",
+          "hide": false,
           "refId": "A"
         }
       ],
@@ -240,9 +239,8 @@
             "type": "loki",
             "uid": "${DS_LOKI}"
           },
-          "editorMode": "code",
           "expr": "sum(count_over_time(({namespace=\"$namespace\", stream=~\"$stream\", pod=~\"$pod\"} |~ \"(?i)$searchable_pattern\")[$__interval]))",
-          "queryType": "range",
+          "hide": false,
           "refId": "A"
         }
       ],
@@ -278,9 +276,8 @@
             "type": "loki",
             "uid": "${DS_LOKI}"
           },
-          "editorMode": "code",
-          "expr": "{namespace=\"$namespace\", pod=~\"$pod\", stream=~\"$stream\"} |~ \"(?i)$searchable_pattern\"",
-          "queryType": "range",
+          "expr": "{namespace=\"$namespace\", pod=~\"$pod\", stream=~\"$stream\"} |~ \"(?i)$searchable_pattern\" ",
+          "hide": false,
           "refId": "A"
         }
       ],
@@ -329,8 +326,9 @@
             "uid": "${DS_CLOUDWATCH}"
           },
           "dimensions": {},
-          "expression": " fields @timestamp, @message\n | filter @logStream like 'var.log.containers.${fargate_logging_search}'\n | sort @timestamp desc\n | limit 20",
+          "expression": "fields @timestamp, @message\n| filter @logStream like 'var.log.containers.${fargate_logging_search}'\n| sort @timestamp desc\n| limit 20",
           "id": "",
+          "key": "Q-0db0406a-4fd4-48c3-a09c-faaa7f031b59-0",
           "label": "",
           "logGroups": [
             {
@@ -340,10 +338,10 @@
             }
           ],
           "matchExact": true,
-          "metricEditorMode": 1,
+          "metricEditorMode": 0,
           "metricName": "",
           "metricQueryType": 0,
-          "namespace": "",
+          "namespace": "/aws/eks/uat/fargate-logging/",
           "period": "",
           "queryMode": "Logs",
           "refId": "A",
@@ -360,45 +358,12 @@
   "refresh": "30s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "Loki",
+    "logging"
+  ],
   "templating": {
     "list": [
-      {
-        "current": {
-          "selected": false,
-          "text": "Loki",
-          "value": "Loki"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "datasource_loki",
-        "options": [],
-        "query": "loki",
-        "queryValue": "",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "type": "datasource"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "CloudWatch",
-          "value": "CloudWatch"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "datasource_cw",
-        "options": [],
-        "query": "cloudwatch",
-        "queryValue": "",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "type": "datasource"
-      },
       {
         "current": {},
         "datasource": {
@@ -491,8 +456,8 @@
       {
         "current": {
           "selected": false,
-          "text": "karpenter",
-          "value": "karpenter"
+          "text": "argocd",
+          "value": "argocd"
         },
         "description": "fargate_logging_search",
         "hide": 0,
@@ -501,11 +466,11 @@
         "options": [
           {
             "selected": true,
-            "text": "karpenter",
-            "value": "karpenter"
+            "text": "argocd",
+            "value": "argocd"
           }
         ],
-        "query": "karpenter",
+        "query": "argocd",
         "skipUrlSync": false,
         "type": "textbox"
       }
@@ -529,8 +494,8 @@
     ]
   },
   "timezone": "",
-  "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch) Copy",
-  "uid": "cda19b27-2602-48b9-bfcb-7aaa5b39c75c",
-  "version": 5,
+  "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
+  "uid": "fRIvzUZMz",
+  "version": 9,
   "weekStart": ""
 }
