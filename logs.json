@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
-  "id": 7,
+  "id": 6,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -284,7 +284,7 @@
             "uid": "${datasource_cw}"
           },
           "dimensions": {},
-          "expression": " fields @timestamp, @message\n | filter @logStream like 'var.log.containers.${fargate_logging_search}'\n | sort @timestamp desc\n | limit 20",
+          "expression": " fields @timestamp, @message\n | filter @logStream like /(?i)var.log.containers.${fargate_logging_search}/\n | filter @message like /(?i)$searchable_pattern/\n | sort @timestamp desc",
           "id": "",
           "label": "",
           "logGroupNames": [
@@ -360,8 +360,8 @@
       {
         "current": {
           "selected": false,
-          "text": "kube-system",
-          "value": "kube-system"
+          "text": "monitoring",
+          "value": "monitoring"
         },
         "datasource": {
           "type": "loki",
@@ -441,8 +441,8 @@
       {
         "current": {
           "selected": false,
-          "text": "error",
-          "value": "error"
+          "text": "sync",
+          "value": "sync"
         },
         "hide": 0,
         "label": "Search (case insensitive)",
@@ -450,11 +450,11 @@
         "options": [
           {
             "selected": true,
-            "text": "error",
-            "value": "error"
+            "text": "sync",
+            "value": "sync"
           }
         ],
-        "query": "error",
+        "query": "sync",
         "skipUrlSync": false,
         "type": "textbox"
       },
@@ -501,6 +501,6 @@
   "timezone": "",
   "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
   "uid": "",
-  "version": 8,
+  "version": 155,
   "weekStart": ""
 }
