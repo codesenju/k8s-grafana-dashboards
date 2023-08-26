@@ -22,11 +22,11 @@
     ]
   },
   "description": "Container/Pod Log Dashboard(Loki as DataSource)",
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
-  "id": 6,
+  "id": 7,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -359,9 +359,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "monitoring",
-          "value": "monitoring"
+          "selected": true,
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": {
           "type": "loki",
@@ -441,8 +441,8 @@
       {
         "current": {
           "selected": false,
-          "text": "sync",
-          "value": "sync"
+          "text": "error",
+          "value": "error"
         },
         "hide": 0,
         "label": "Search (case insensitive)",
@@ -450,19 +450,19 @@
         "options": [
           {
             "selected": true,
-            "text": "sync",
-            "value": "sync"
+            "text": "error",
+            "value": "error"
           }
         ],
-        "query": "sync",
+        "query": "error",
         "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "current": {
           "selected": false,
-          "text": "argocd",
-          "value": "argocd"
+          "text": "karpenter",
+          "value": "karpenter"
         },
         "description": "fargate_logging_search",
         "hide": 0,
@@ -471,11 +471,11 @@
         "options": [
           {
             "selected": true,
-            "text": "argocd",
-            "value": "argocd"
+            "text": "karpenter",
+            "value": "karpenter"
           }
         ],
-        "query": "argocd",
+        "query": "karpenter",
         "skipUrlSync": false,
         "type": "textbox"
       }
@@ -501,6 +501,6 @@
   "timezone": "",
   "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
   "uid": "",
-  "version": 155,
+  "version": 3,
   "weekStart": ""
 }
