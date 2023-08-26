@@ -22,7 +22,7 @@
     ]
   },
   "description": "Litmus chaos on skillsets-api",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
   "id": 6,
