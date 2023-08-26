@@ -25,7 +25,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 2,
+  "id": 6,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1566,9 +1566,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "litmus",
-          "value": "litmus"
+          "selected": true,
+          "text": "uat",
+          "value": "uat"
         },
         "datasource": {
           "type": "prometheus",
@@ -1595,8 +1595,8 @@
       {
         "current": {
           "selected": false,
-          "text": "chaos-exporter",
-          "value": "chaos-exporter"
+          "text": "uat-skillsets-api",
+          "value": "uat-skillsets-api"
         },
         "datasource": {
           "type": "prometheus",
@@ -1622,8 +1622,8 @@
       {
         "current": {
           "selected": false,
-          "text": "1",
-          "value": "1"
+          "text": "3",
+          "value": "3"
         },
         "datasource": {
           "type": "prometheus",
@@ -1656,6 +1656,6 @@
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments",
   "uid": "",
-  "version": 43,
+  "version": 1,
   "weekStart": ""
 }
