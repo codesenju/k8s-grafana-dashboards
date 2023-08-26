@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 14981,
   "graphTooltip": 1,
-  "id": 4,
+  "id": 3,
   "links": [
     {
       "$$hashKey": "object:94",
@@ -653,7 +653,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e14c6070-76ae-4a58-9f6b-6feed846d7c1"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -667,7 +667,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e14c6070-76ae-4a58-9f6b-6feed846d7c1"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -2476,7 +2476,7 @@
   },
   "timezone": "",
   "title": "CoreDNS",
-  "uid": "wY4blRMGz",
-  "version": 5,
+  "uid": "",
+  "version": 2,
   "weekStart": ""
 }
