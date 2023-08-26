@@ -2432,7 +2432,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "b12e73b2-3ba8-4987-9778-d38070bb4994"
+          "uid": ""
         },
         "definition": "label_values(up{k8s_app=\"kube-dns\"},node)",
         "hide": 0,
