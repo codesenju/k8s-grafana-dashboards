@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
-  "id": 7,
+  "id": 14,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -260,13 +260,188 @@
         "type": "cloudwatch",
         "uid": "${datasource_cw}"
       },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "0",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
       "gridPos": {
-        "h": 10,
-        "w": 24,
+        "h": 3,
+        "w": 12,
         "x": 0,
         "y": 14
       },
       "id": 21,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.1.6",
+      "targets": [
+        {
+          "datasource": {
+            "type": "cloudwatch",
+            "uid": "${datasource_cw}"
+          },
+          "dimensions": {},
+          "expression": " fields @timestamp, @message\n | filter @logStream like /(?i)var.log.containers.${fargate_logging_search}/\n | filter @message like /(?i)$searchable_pattern/\n | stats count(*) as logCount",
+          "id": "",
+          "label": "",
+          "logGroupNames": [
+            "/aws/eks/uat/fargate-logging/"
+          ],
+          "logGroups": [
+            {
+              "accountId": "587878432697",
+              "arn": "arn:aws:logs:us-east-1:587878432697:log-group:/aws/eks/uat/fargate-logging/:*",
+              "name": "/aws/eks/uat/fargate-logging/"
+            }
+          ],
+          "matchExact": true,
+          "metricEditorMode": 1,
+          "metricName": "",
+          "metricQueryType": 0,
+          "namespace": "",
+          "period": "",
+          "queryMode": "Logs",
+          "refId": "A",
+          "region": "us-east-1",
+          "sqlExpression": "",
+          "statistic": "Average",
+          "statsGroups": []
+        }
+      ],
+      "title": "$fargate_logging_search | Total Log Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${datasource_cw}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "0",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 12,
+        "y": 14
+      },
+      "id": 25,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.1.6",
+      "targets": [
+        {
+          "datasource": {
+            "type": "cloudwatch",
+            "uid": "${datasource_cw}"
+          },
+          "dimensions": {},
+          "expression": " fields @timestamp, @message\n | filter @logStream like /(?i)var.log.containers.${fargate_logging_search}/\n | filter @message like /(?i)$searchable_pattern/\n | stats count(*) as logCount",
+          "id": "",
+          "label": "",
+          "logGroupNames": [
+            "/aws/eks/uat/fargate-logging/"
+          ],
+          "logGroups": [
+            {
+              "accountId": "587878432697",
+              "arn": "arn:aws:logs:us-east-1:587878432697:log-group:/aws/eks/uat/fargate-logging/:*",
+              "name": "/aws/eks/uat/fargate-logging/"
+            }
+          ],
+          "matchExact": true,
+          "metricEditorMode": 1,
+          "metricName": "",
+          "metricQueryType": 0,
+          "namespace": "",
+          "period": "",
+          "queryMode": "Logs",
+          "refId": "A",
+          "region": "us-east-1",
+          "sqlExpression": "",
+          "statistic": "Average",
+          "statsGroups": []
+        }
+      ],
+      "title": "$fargate_logging_search | Total log count of $searchable_pattern",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${datasource_cw}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 24,
       "options": {
         "dedupStrategy": "none",
         "enableLogDetails": true,
@@ -359,9 +534,9 @@
       },
       {
         "current": {
-          "selected": true,
-          "text": "kube-system",
-          "value": "kube-system"
+          "selected": false,
+          "text": "ingress-nginx",
+          "value": "ingress-nginx"
         },
         "datasource": {
           "type": "loki",
@@ -482,7 +657,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -501,6 +676,6 @@
   "timezone": "",
   "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
   "uid": "",
-  "version": 3,
+  "version": 7,
   "weekStart": ""
 }
