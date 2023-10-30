@@ -25,6 +25,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
+  "id": 7,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -85,7 +86,7 @@
         },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -113,9 +114,7 @@
         "defaults": {
           "custom": {
             "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
+            "displayMode": "auto",
             "inspect": false
           },
           "mappings": [],
@@ -173,7 +172,7 @@
           }
         ]
       },
-      "pluginVersion": "9.5.2",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -644,7 +643,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum(rate(apiserver_request_duration_seconds_bucket{job=\"apiserver\"}[5m])) by (verb)",
+          "expr": "sum(rate(apiserver_request_duration_seconds_bucket{job=\"kubernetes-apiservers\"}[5m])) by (verb)",
           "interval": "$resolution",
           "legendFormat": "{{ verb }}",
           "range": true,
@@ -1233,7 +1232,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 38,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [
     "Kubernetes",
@@ -1317,6 +1316,6 @@
   "timezone": "",
   "title": "Kubernetes / System / API Server",
   "uid": "",
-  "version": 1,
+  "version": 21,
   "weekStart": ""
 }

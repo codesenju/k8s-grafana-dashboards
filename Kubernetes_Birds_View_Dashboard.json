@@ -2127,6 +2127,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "Kubernetes Bird's View Dashboard",
+  "uid": "",
   "version": 2,
   "weekStart": ""
 }
