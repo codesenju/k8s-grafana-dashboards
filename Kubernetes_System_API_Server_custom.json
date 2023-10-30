@@ -643,7 +643,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum(rate(apiserver_request_duration_seconds_bucket{job=\"kubernetes-apiservers\"}[5m])) by (verb)",
+          "expr": "sum(rate(apiserver_request_duration_seconds_bucket{job=\"apiserver\"}[5m])) by (verb)",
           "interval": "$resolution",
           "legendFormat": "{{ verb }}",
           "range": true,
