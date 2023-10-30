@@ -25,7 +25,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 5,
+  "id": 7,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1611,7 +1611,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(container_cpu_cfs_throttled_seconds_total{image!=\"\",namespace=\"$namespace\"}[5m])) by (pod) > 0",
+          "expr": "sum(rate(container_cpu_cfs_throttled_periods_total{image!=\"\",namespace=\"$namespace\"}[5m])) by (pod) > 0",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2093,7 +2093,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "kube-system",
           "value": "kube-system"
         },
@@ -2128,6 +2128,6 @@
   "timezone": "",
   "title": "Kubernetes Bird's View Dashboard",
   "uid": "",
-  "version": 2,
+  "version": 9,
   "weekStart": ""
 }
