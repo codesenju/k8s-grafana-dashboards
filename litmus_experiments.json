@@ -22,10 +22,10 @@
     ]
   },
   "description": "Litmus chaos on skillsets-api",
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 6,
+  "id": 3,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -125,7 +125,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(container_cpu_cfs_throttled_seconds_total{namespace=~\"$namespace\", image!=\"\", pod=~\"${deployment}.*\"}[5m])) by (pod) > 0",
+          "expr": "sum(rate(container_cpu_cfs_throttled_periods_total{namespace=~\"$namespace\", image!=\"\", pod=~\"${deployment}.*\"}[5m])) by (pod) > 0",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1373,7 +1373,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(increase(kube_pod_container_status_restarts_total{}[5m])) by(pod) > 0",
+          "expr": "sum(increase(kube_pod_container_status_restarts_total{namespace=\"$namespace\"}[5m])) by(pod) > 0",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1567,8 +1567,8 @@
       {
         "current": {
           "selected": true,
-          "text": "uat",
-          "value": "uat"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": {
           "type": "prometheus",
@@ -1595,8 +1595,8 @@
       {
         "current": {
           "selected": false,
-          "text": "uat-skillsets-api",
-          "value": "uat-skillsets-api"
+          "text": "coredns",
+          "value": "coredns"
         },
         "datasource": {
           "type": "prometheus",
@@ -1649,13 +1649,13 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "k8s pod monitoring on litmus experiments",
   "uid": "",
-  "version": 1,
+  "version": 310,
   "weekStart": ""
 }
