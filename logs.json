@@ -671,7 +671,7 @@
   },
   "timezone": "",
   "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
-  "uid": "29cfd370-effd-4ac0-bc3d-06634bb4d788",
+  "uid": "",
   "version": 333,
   "weekStart": ""
 }
