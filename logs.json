@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 16966,
   "graphTooltip": 0,
-  "id": 14,
+  "id": 3,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -70,8 +70,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgb(31, 255, 7)",
-                "value": null
+                "color": "rgb(31, 255, 7)"
               },
               {
                 "color": "rgb(31, 255, 7)",
@@ -152,8 +151,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -272,8 +270,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text",
-                "value": null
+                "color": "text"
               },
               {
                 "color": "green",
@@ -359,8 +356,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text",
-                "value": null
+                "color": "text"
               },
               {
                 "color": "red",
@@ -535,8 +531,8 @@
       {
         "current": {
           "selected": false,
-          "text": "ingress-nginx",
-          "value": "ingress-nginx"
+          "text": "argo-events",
+          "value": "argo-events"
         },
         "datasource": {
           "type": "loki",
@@ -615,7 +611,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "error",
           "value": "error"
         },
@@ -635,7 +631,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "karpenter",
           "value": "karpenter"
         },
@@ -675,7 +671,7 @@
   },
   "timezone": "",
   "title": "K8s Centralized Logging (Loki, fluentbit, Cloudwatch)",
-  "uid": "",
-  "version": 7,
+  "uid": "29cfd370-effd-4ac0-bc3d-06634bb4d788",
+  "version": 333,
   "weekStart": ""
 }
